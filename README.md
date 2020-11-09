@@ -10,7 +10,7 @@ we love Stisla Admin Template and Laravel 8 let's make them love each other.
 - Stisla Admin Template ^2.3.0 - [getstisla.com](https://getstisla.com/)
 
 ### News?
-- "krlove/eloquent-model-generator": "^1.3" - [krlove/eloquent-model-generator](https://github.com/krlove/eloquent-model-generator)
+- krlove/eloquent-model-generator": ^1.3" - [krlove/eloquent-model-generator](https://github.com/krlove/eloquent-model-generator)
 - Adjustment jetstream (with prefix and name admin for dashboard)
 
 Include simple Data Table with Livewire (CRUD).
