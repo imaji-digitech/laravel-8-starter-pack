@@ -18,7 +18,7 @@ $user = auth()->user();
                 <div class="d-sm-none d-lg-inline-block">Hi, Welcome</div></a>
             @endif
             <div class="dropdown-menu dropdown-menu-right">
-                <a href="/user/profile" class="dropdown-item has-icon">
+                <a href="{{route('admin.profile.show')}}" class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Profile
                 </a>
                 @if (request()->get('is_admin'))

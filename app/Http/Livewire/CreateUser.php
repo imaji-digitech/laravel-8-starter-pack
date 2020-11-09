@@ -59,6 +59,7 @@ class CreateUser extends Component
 
     public function mount ()
     {
+        $this->user['role']='';
         if (!!$this->userId) {
             $user = User::find($this->userId);
 

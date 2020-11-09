@@ -19437,9 +19437,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /media/ryanaunur/Project/playground/laravel-8-stisla-jetstream/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /media/ryanaunur/Project/playground/laravel-8-stisla-jetstream/resources/css/app.css */"./resources/css/app.css");
-module.exports = __webpack_require__(/*! /media/ryanaunur/Project/playground/laravel-8-stisla-jetstream/resources/css/tailwind.css */"./resources/css/tailwind.css");
+__webpack_require__(/*! /home/masif088/Documents/genbi project/laravel-8-stisla-jetstream/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /home/masif088/Documents/genbi project/laravel-8-stisla-jetstream/resources/css/app.css */"./resources/css/app.css");
+module.exports = __webpack_require__(/*! /home/masif088/Documents/genbi project/laravel-8-stisla-jetstream/resources/css/tailwind.css */"./resources/css/tailwind.css");
 
 
 /***/ })

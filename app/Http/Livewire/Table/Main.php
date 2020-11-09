@@ -43,7 +43,7 @@ class Main extends Component
                     "users" => $users,
                     "data" => array_to_object([
                         'href' => [
-                            'create_new' => route('user.new'),
+                            'create_new' => route('admin.user.new'),
                             'create_new_text' => 'Buat User Baru',
                             'export' => '#',
                             'export_text' => 'Export'

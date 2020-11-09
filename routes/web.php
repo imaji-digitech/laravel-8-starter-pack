@@ -2,6 +2,11 @@
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Jetstream\Http\Controllers\CurrentTeamController;
+use Laravel\Jetstream\Http\Controllers\Livewire\ApiTokenController;
+use Laravel\Jetstream\Http\Controllers\Livewire\TeamController;
+use Laravel\Jetstream\Http\Controllers\Livewire\UserProfileController;
+use Laravel\Jetstream\Jetstream;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +22,34 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+//[ 'middleware' => [],'prefix'=>'admin' ]
+//Route::name('admin.')->middleware(['auth:sanctum', 'verified'])->prefix('admin/')->group(function() {
+Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verified'])->group(function() {
     Route::view('/dashboard', "dashboard")->name('dashboard');
+//    Route::middleware(['checkRole:1']){}
+    Route::get('/user', [ UserController::class, "index" ])->name('user');
+    Route::view('/user/new', "pages.user.new")->name('user.new');
+    Route::view('/user/edit/{userId}', "pages.user.edit")->name('user.edit');
 
-    Route::get('/user', [ UserController::class, "index_view" ])->name('user');
-    Route::view('/user/new', "pages.user.user-new")->name('user.new');
-    Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
+
+    Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {
+        Route::group(['middleware' => ['auth', 'verified']], function () {
+            // User & Profile...
+            Route::get('/user/profile', [UserProfileController::class, 'show'])
+                ->name('profile.show');
+
+            // API...
+            if (Jetstream::hasApiFeatures()) {
+                Route::get('/user/api-tokens', [ApiTokenController::class, 'index'])->name('api-tokens.index');
+            }
+
+            // Teams...
+            if (Jetstream::hasTeamFeatures()) {
+                Route::get('/teams/create', [TeamController::class, 'create'])->name('teams.create');
+                Route::get('/teams/{team}', [TeamController::class, 'show'])->name('teams.show');
+                Route::put('/current-team', [CurrentTeamController::class, 'update'])->name('current-team.update');
+            }
+        });
+    });
+
 });
