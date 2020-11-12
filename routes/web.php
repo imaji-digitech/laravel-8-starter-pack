@@ -19,8 +19,8 @@ use Laravel\Jetstream\Jetstream;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/dashboard', function () {
+    return redirect(route('admin.dashboard'));
 });
 //[ 'middleware' => [],'prefix'=>'admin' ]
 //Route::name('admin.')->middleware(['auth:sanctum', 'verified'])->prefix('admin/')->group(function() {

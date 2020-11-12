@@ -3,6 +3,7 @@ we love Stisla Admin Template, Krlove and Laravel 8 let's make them love each ot
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/nyancodeid/laravel-8-stisla-jetstream/issues)
 
+
 ## What inside?
 - Laravel ^8.5 - [laravel.com/docs/8.x](https://laravel.com/docs/8.x)
 - Laravel Jetstream ^1.2 - [jetstream.laravel.com](https://jetstream.laravel.com/)
