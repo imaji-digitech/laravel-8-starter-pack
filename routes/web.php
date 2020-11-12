@@ -19,6 +19,10 @@ use Laravel\Jetstream\Jetstream;
 |
 */
 
+Route::get('/dashboard', function () {
+    return redirect(route('admin.dashboard'));
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
