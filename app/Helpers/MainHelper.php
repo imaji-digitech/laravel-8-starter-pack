@@ -13,7 +13,17 @@ if (!function_exists('array_to_object')) {
         return json_decode(json_encode($array));
     }
 }
-
+if (!function_exists('eloquent_to_options')) {
+    function eloquent_to_options($array, $value, $title)
+    {
+        $arr = array();
+        foreach ($array as $index => $a) {
+            $arr[$index]['value'] = $a->$value;
+            $arr[$index]['title'] = $a->$title;
+        }
+        return $arr;
+    }
+}
 if (!function_exists('empty_fallback')) {
 
     /**
