@@ -143,6 +143,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1nFFHTJ27FPJh7ONP5b8yS1sEHO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -179,5 +180,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611929106711">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1611929106711" />
   </component>
 </project>

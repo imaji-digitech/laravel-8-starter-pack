@@ -5,31 +5,32 @@ namespace App\View\Components;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class FormSelect2 extends Component
+class Select extends Component
 {
+    public $selected;
+    public $options;
     public $model;
     public $title;
-    public $options;
-    public $selected;
 
     /**
-     * FormSelect2 constructor.
+     * Select constructor.
+     * @param $selected
+     * @param $options
      * @param $model
      * @param $title
-     * @param $options
-     * @param $selected
      */
-    public function __construct($model, $title, $options, $selected)
+    public function __construct($options, $selected, $title, $model)
     {
+        $this->selected = $selected;
+        $this->options = $options;
         $this->model = $model;
         $this->title = $title;
-        $this->options = $options;
-        $this->selected = $selected;
     }
+
 
     public function isSelected($option)
     {
-        return in_array($option, $this->selected);
+        return $option == $this->selected;
     }
 
     /**
@@ -39,6 +40,6 @@ class FormSelect2 extends Component
      */
     public function render()
     {
-        return view('components.form.form-select2');
+        return view('components.form.select');
     }
 }

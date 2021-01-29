@@ -2,20 +2,20 @@
 
 namespace App\View\Components;
 
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class FormDate extends Component
+class Input extends Component
 {
+
     public $type;
     public $title;
     public $model;
 
     /**
-     * FormInput constructor.
+     * Input constructor.
      * @param string $type
      * @param string $title
-     * @param $model
+     * @param string $model
      */
     public function __construct($type, $title, $model)
     {
@@ -27,10 +27,11 @@ class FormDate extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return View|string
+     * @return \Illuminate\Contracts\View\View|string
      */
     public function render()
     {
-        return view('components.form.form-date');
+
+        return view('components.form.input');
     }
 }

@@ -12,31 +12,17 @@
 
     <script>
         document.addEventListener('livewire:load', function () {
-            @if($time!='')
-            var time = @this.get('{{$model}}');
-            time = time.toString().match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
-            if (time.length > 1) {
-                time = time.slice(1);
-                time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
-                time[0] = +time[0] % 12 || 12; // Adjust hours
+            if(@this.get('{{$model}}')!='') {
+                var time = @this.get('{{$model}}');
+                time = time.toString().match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+                if (time.length > 1) {
+                    time = time.slice(1);
+                    time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
+                    time[0] = +time[0] % 12 || 12; // Adjust hours
+                }
+                $("#{{str_replace(".", "", $model)}}").timepicker('setTime', time.join(''));
             }
-            $("#{{str_replace(".", "", $model)}}").timepicker('setTime', time.join(''));
-            @endif
-            {{--$("#{{str_replace(".", "", $model)}}").timepicker({--}}
-            {{--    icons:--}}
-            {{--        {--}}
-            {{--            up: 'fa fa-angle-up',--}}
-            {{--            down: 'fa fa-angle-down'--}}
-            {{--        },--}}
-            {{--})--}}
-            $(".timepicker").datetimepicker({
-                icons:
-                    {
-                        up: 'fa fa-angle-up',
-                        down: 'fa fa-angle-down'
-                    },
-                format: 'LT'
-            });
+
             $("#{{str_replace(".", "", $model)}}").on("change.timepicker", () => {
                 var time = $("#{{str_replace(".", "", $model)}}").val();
                 var hours = Number(time.match(/^(\d+)/)[1]);

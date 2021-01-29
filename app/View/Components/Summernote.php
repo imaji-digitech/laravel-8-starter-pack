@@ -4,23 +4,21 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class FormSummernote extends Component
+class Summernote extends Component
 {
     public $title;
     public $model;
-    public $summernote;
 
     /**
-     * FormSummernote constructor.
+     * Summernote constructor.
      * @param $title
      * @param $model
      * @param $summernote
      */
-    public function __construct($title, $model, $summernote)
+    public function __construct($title, $model)
     {
         $this->title = $title;
         $this->model = $model;
-        $this->summernote = $summernote;
     }
 
 
@@ -31,6 +29,6 @@ class FormSummernote extends Component
      */
     public function render()
     {
-        return view('components.form.form-summernote');
+        return view('components.form.summernote');
     }
 }

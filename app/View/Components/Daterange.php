@@ -5,16 +5,16 @@ namespace App\View\Components;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class FormTextarea extends Component
+class Daterange extends Component
 {
+
     public $title;
     public $model;
 
     /**
-     * FormTextarea constructor.
-     * @param $title
+     * Input constructor.
+     * @param string $title
      * @param $model
-     * @return void
      */
     public function __construct($title, $model)
     {
@@ -29,6 +29,6 @@ class FormTextarea extends Component
      */
     public function render()
     {
-        return view('components.form.form-textarea');
+        return view('components.form.daterange');
     }
 }
