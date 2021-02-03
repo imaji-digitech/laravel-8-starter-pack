@@ -8,10 +8,65 @@ $links = [
     [
         "href" => [
             [
+                "section_text" => "Blog",
+                "section_list" => [
+                    ["href" => "admin.blog.index", "text" => "Data Blog"],
+                    ["href" => "admin.blog.create", "text" => "Buat Blog"]
+                ]
+            ]
+        ],
+        "text" => "Blogging",
+        "is_multi" => true,
+    ],
+    [
+        "href" => [
+            [
+                "section_text" => "Berita",
+                "section_list" => [
+                    ["href" => "admin.news.index", "text" => "Data Berita"],
+                    ["href" => "admin.news.create", "text" => "Buat Berita"]
+                ]
+            ],
+            [
+                "section_text" => "Event",
+                "section_list" => [
+                    ["href" => "admin.event.index", "text" => "Data Event"],
+                    ["href" => "admin.event.create", "text" => "Buat Event"]
+                ]
+            ],
+            [
+                "section_text" => "FAQ",
+                "section_list" => [
+                    ["href" => "admin.faq.index", "text" => "Data FAQ"],
+                    ["href" => "admin.faq.create", "text" => "Buat FAQ"]
+                ]
+            ],
+            [
+                "section_text" => "Headline",
+                "section_list" => [
+                    ["href" => "admin.headline.index", "text" => "Data Headline"],
+                    ["href" => "admin.headline.create", "text" => "Buat Headline"]
+                ]
+            ],
+            [
+                "section_text" => "Tag",
+                "section_list" => [
+                    ["href" => "admin.tag.index", "text" => "Data Tag"],
+                    ["href" => "admin.tag.create", "text" => "Buat Tag"]
+                ]
+            ]
+        ],
+
+        "text" => "Admin",
+        "is_multi" => true,
+    ],
+    [
+        "href" => [
+            [
                 "section_text" => "User",
                 "section_list" => [
-                    ["href" => "admin.user", "text" => "Data User"],
-                    ["href" => "admin.user.new", "text" => "Buat User"]
+                    ["href" => "admin.user.index", "text" => "Data User"],
+                    ["href" => "admin.user.create", "text" => "Buat User"]
                 ]
             ]
         ],

@@ -1,13 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/EventController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FaqController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HeadlineController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/NewController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TagController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ContentForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/FaqForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/HeadlineForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/TagForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/ContentTag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Faq.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Headline.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_19_172953_create_headlines_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_19_174128_create_faqs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/fontawesome-all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/nice-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/owl.video.play.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/slick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/slicknav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/themify-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/ticker-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/Flaticon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/Flaticon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/Flaticon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/Flaticon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/Flaticon.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/Flaticond41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-brands-400d41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-regular-400d41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/fa-solid-900d41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/themify9f24.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/themify9f24.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/themify9f24.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/themify9f24.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/themifyd41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/images/controls.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/background-img/bg-img-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/background-img/bg-img-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/banner/bradcam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/banner/bradcam2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/banner/bradcam3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/blog/author.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/blog/single_blog_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/blog/single_blog_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/blog/single_blog_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/blog/single_blog_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/blog/single_blog_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/comment/comment_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/comment/comment_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/comment/comment_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/disabled-check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/disabled-radio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/f1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/f2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/f3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/f4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/f5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/f6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/f7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/f8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/g1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/g2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/g3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/g4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/g5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/g6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/g7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/g8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/primary-check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/primary-radio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/success-check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/elements/success-radio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/favicon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/hero/header_card.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/icon/header_icon1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/logo/form-iocn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/logo/loder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/logo/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/logo/logo2_footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/icon-fb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/icon-ins.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/icon-tw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/icon-yo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/news_card.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/recent1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/recent2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/recent3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/weekly2News1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/weekly2News2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/weekly2News3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/weekly2News4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/weeklyNews1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/weeklyNews2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/weeklyNews3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/whatNews1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/whatNews2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/whatNews3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/news/whatNews4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/about_heor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/instra1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/instra2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/instra3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/instra4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/instra5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/instra6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/post_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/post_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/post_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/post_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/post_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/post_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/post_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/post_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/post_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/post_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/post/preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/slider/slider-img-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/trending/right1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/trending/right2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/trending/right3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/trending/right4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/trending/right5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/trending/trending_bottom1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/trending/trending_bottom2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/trending/trending_bottom3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/img/trending/trending_top.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/animated.headline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/gijgo.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/jquery.ajaxchimp.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/jquery.form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/jquery.magnific-popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/jquery.nice-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/jquery.scrollUp.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/jquery.slicknav.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/jquery.sticky.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/jquery.ticker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/mail-script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/site.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/slick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/vendor/jquery-1.12.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/vendor/modernizr-3.5.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/js/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/front-sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/contact.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/detail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/event.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/tausiyah.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/content-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/faq-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/headline-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/faq.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/headline.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/tag.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/tag-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/event/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/event/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/event/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/faq/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/faq/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/faq/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/headline/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/headline/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/headline/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/new/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/new/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/new/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/tag/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/tag/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/tag/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/FormBlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/FormBlog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/MainHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/MainHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042429_create_blogs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_19_172946_create_contents_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042520_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_19_172945_create_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042527_create_blog_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_19_172947_create_content_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/tailwind.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/summernote.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/summernote.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/form-blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/form-blog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/data-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/data-table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/table/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/table/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/blog/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/blog/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/blog/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/blog/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/blog/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/blog/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/user/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,16 +406,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/database/migrations" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
-      <recent name="$PROJECT_DIR$/resources/views/pages" />
-      <recent name="$PROJECT_DIR$/app/Http/Livewire" />
+      <recent name="C:\xampp\htdocs\laravel-8-jetstream-stisla-form-template\public" />
+      <recent name="C:\xampp\htdocs\laravel-8-jetstream-stisla-form-template\app\View\Components" />
+      <recent name="C:\xampp\htdocs\laravel-8-jetstream-stisla-form-template\app\Models" />
+      <recent name="C:\xampp\htdocs\laravel-8-jetstream-stisla-form-template\app\Http\Livewire" />
+      <recent name="C:\xampp\htdocs\laravel-8-jetstream-stisla-form-template\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -177,6 +428,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -189,11 +441,24 @@
       <updated>1610977843596</updated>
       <workItem from="1610977845087" duration="1387000" />
       <workItem from="1612275111470" duration="668000" />
+      <workItem from="1612334695632" duration="454000" />
+      <workItem from="1612335246836" duration="2337000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611929106711">

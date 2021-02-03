@@ -1,7 +1,13 @@
 <?php
 
 use App\Http\Controllers\Admin\BlogController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\HeadlineController;
+use App\Http\Controllers\Admin\NewController;
+use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\CurrentTeamController;
 use Laravel\Jetstream\Http\Controllers\Livewire\ApiTokenController;
@@ -25,18 +31,19 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    $content=\App\Models\Content::whereStatus('accepted')->get();
+    return view('front.blog',compact('content'));
 });
-//[ 'middleware' => [],'prefix'=>'admin' ]
-//Route::name('admin.')->middleware(['auth:sanctum', 'verified'])->prefix('admin/')->group(function() {
+
+Route::get('/',[ClientController::class,''])->name('index');
+Route::get('/tausiyah',[ClientController::class,'tausiyah'])->name('tausiyah');
+Route::get('/blog',[ClientController::class,'blog'])->name('blog');
+Route::get('/event',[ClientController::class,'event'])->name('event');
+Route::get('/about',[ClientController::class,'about'])->name('about');
+Route::get('/{slug}',[ClientController::class,'detail'])->name('detail');
+
 Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verified'])->group(function() {
     Route::view('/dashboard', "dashboard")->name('dashboard');
-    Route::resource('blog', BlogController::class);
-//    Route::middleware(['checkRole:1']){}
-    Route::get('/user', [ UserController::class, "index" ])->name('user');
-    Route::view('/user/new', "pages.user.create")->name('user.new');
-    Route::view('/user/edit/{userId}', "pages.user.edit")->name('user.edit');
-
 
     Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {
         Route::group(['middleware' => ['auth', 'verified']], function () {
@@ -58,4 +65,13 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verif
         });
     });
 
+    Route::resource('tag',TagController::class)->only(['index','create','edit']);
+    Route::resource('blog',BlogController::class)->only(['index','create','edit']);
+    Route::resource('faq',FaqController::class)->only(['index','create','edit']);
+    Route::resource('headline',HeadlineController::class)->only(['index','create','edit']);
+    Route::resource('user',UserController::class)->only(['index','create','edit']);
+    Route::resource('event',EventController::class)->only(['index','create','edit']);
+    Route::resource('news',NewController::class)->only(['index','create','edit']);
+
 });
+
