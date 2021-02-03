@@ -1,4 +1,4 @@
-# Laravel 8 + Stisla + Jetstream + Livewire + Krlove
+# Laravel 8 + Stisla + Jetstream + Livewire + Krlove + Form Component
 we love Stisla Admin Template, Krlove and Laravel 8 let's make them love each other.
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/nyancodeid/laravel-8-stisla-jetstream/issues)
@@ -11,8 +11,9 @@ we love Stisla Admin Template, Krlove and Laravel 8 let's make them love each ot
 - Stisla Admin Template ^2.3.0 - [getstisla.com](https://getstisla.com/)
 
 ### News?
-- krlove/eloquent-model-generator": ^1.3" - [krlove/eloquent-model-generator](https://github.com/krlove/eloquent-model-generator)
+- Krlove/eloquent-model-generator": ^1.3" - [krlove/eloquent-model-generator](https://github.com/krlove/eloquent-model-generator)
 - Adjustment jetstream (with prefix and name admin for dashboard)
+- Form component for CRUD with Livewire
 
 Include simple Data Table with Livewire (CRUD).
 
@@ -38,13 +39,3 @@ $ php artisan key:generate
 # laravel migrate
 $ php artisan migrate
 ```
-
-## How does it look?
-
-<p align="center">
-    <img src="https://telegra.ph/file/49c7571f06872948fb0bc.png" width="80%" height="auto" />
-    <img src="https://telegra.ph/file/613288c34841388c24f34.png" width="80%" height="auto" />
-    <img src="https://telegra.ph/file/7f893b085f7aaca5b91be.png" width="80%" height="auto" />
-    <img src="https://telegra.ph/file/8741e5fc455f02571b4c2.png" width="80%" height="auto" />
-</p>
-
