@@ -17,13 +17,10 @@
         <link rel="stylesheet" href="{{ asset('vendor/summernote/dist/summernote-bs4.css')}}">
         <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
         <link rel="stylesheet" href="{{ asset('stisla/css/style.css') }}">
-        <link rel="stylesheet" href="{{ asset('stisla/css/custom.css') }}">
         <link rel="stylesheet" href="{{ asset('stisla/css/components.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/notyf/notyf.min.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/select2/select2.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('vendor/daterangepicker/daterangepicker.css') }}">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{asset('vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css')}}">
 
         <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all">
         <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all">
@@ -77,7 +74,7 @@
         <script defer src="{{asset('vendor/daterangepicker/daterangepicker.js')}}"></script>
         <script defer src="{{asset('vendor/chart.js/dist/Chart.min.js')}}"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-        <script src="{{asset('vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js')}}"></script>
+        {{--<script src="{{asset('assets/bootstrap-daterangepicker/daterangepicker.js')}}"></script>--}}
 
         <script src="{{ asset('stisla/js/stisla.js') }}"></script>
         <script src="{{ asset('stisla/js/scripts.js') }}"></script>
