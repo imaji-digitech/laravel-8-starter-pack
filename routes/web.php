@@ -8,7 +8,7 @@ use Laravel\Jetstream\Http\Controllers\Livewire\ApiTokenController;
 use Laravel\Jetstream\Http\Controllers\Livewire\TeamController;
 use Laravel\Jetstream\Http\Controllers\Livewire\UserProfileController;
 use Laravel\Jetstream\Jetstream;
-
+use Illuminate\Support\Facades\Storage;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +18,10 @@ use Laravel\Jetstream\Jetstream;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+
 */
+
+
 
 Route::get('/dashboard', function () {
     return redirect(route('admin.dashboard'));
@@ -30,6 +33,7 @@ Route::get('/', function () {
 //[ 'middleware' => [],'prefix'=>'admin' ]
 //Route::name('admin.')->middleware(['auth:sanctum', 'verified'])->prefix('admin/')->group(function() {
 Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verified'])->group(function() {
+    Route::post('/summernote-upload',[\App\Http\Controllers\SupportController::class,'upload'])->name('summernote_upload');
     Route::view('/dashboard', "dashboard")->name('dashboard');
     Route::resource('blog', BlogController::class);
 //    Route::middleware(['checkRole:1']){}

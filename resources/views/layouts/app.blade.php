@@ -29,6 +29,25 @@
         <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all">
         <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <style type="text/css">
+            button[data-name=resizedDataImage]  {
+                position: relative;
+                overflow: hidden;
+            }
+
+            button[data-name=resizedDataImage] input {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                opacity: 0;
+                font-size: 200px;
+                max-width: 100%;
+                -ms-filter: 'alpha(opacity=0)';
+                direction: ltr;
+                cursor: pointer;
+            }
+        </style>
         <livewire:styles />
 
         <!-- Scripts -->
@@ -73,7 +92,9 @@
         <script defer src="{{ asset('vendor/notyf/notyf.min.js') }}"></script>
         <script defer src="{{ asset('vendor/sweetalert/sweetalert.min.js') }}"></script>
         <script defer src="{{ asset('stisla/js/modules/chart.min.js') }}"></script>
+        <script type="text/javascript" src="{{asset('js/exif.js')}}"></script>
         <script defer src="{{asset('vendor/summernote/dist/summernote-bs4.js')}}"></script>
+        <script defer src="{{asset('vendor/summernote/plugin/summernote-ext-resized-data-image.js')}}"></script>
         <script defer src="{{asset('vendor/daterangepicker/daterangepicker.js')}}"></script>
         <script defer src="{{asset('vendor/chart.js/dist/Chart.min.js')}}"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>

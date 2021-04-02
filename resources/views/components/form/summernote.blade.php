@@ -11,11 +11,45 @@
                 height: 200,
 
                 callbacks: {
+                    onImageUpload: function(files) {
+                        for(let i=0; i < files.length; i++) {
+                            $.upload(files[i]);
+                        }
+                        console.log('file loading');
+                    },
                     onChange: function (content, $editable) {
                     @this.set('{{$model}}', content)
-                    }
+                    },
+
                 }
             });
+            $.upload = function (file) {
+                let out = new FormData();
+                out.append('file', file, file.name);
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name=csrf-token]').attr('content')
+                    }
+                });
+                $.ajax({
+                    method: 'POST',
+                    url: '{{route('admin.summernote_upload')}}',
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    data: out,
+                    success: function (img) {
+                        // var image = $('<img>').attr('src', 'http://' + img);
+                        {{--$('#{{str_replace(".", "", $model)}}').summernote('insertImage', img);--}}
+                            image='<img src="'+window.location.protocol+'//'+window.location.host+'/storage/'+img+ '" alt=\"Italian Trulli\">'
+                        $("textarea#{{str_replace('.', '', $model)}}").summernote('code',@this.get('{{$model}}')+image);
+console.log(img)
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.error(textStatus + " " + errorThrown);
+                    }
+                });
+            };
         });
     </script>
 </div>
