@@ -14,7 +14,6 @@ class Time extends Component
      * Textarea constructor.
      * @param $title
      * @param $model
-     * @param $time
      */
     public function __construct($title, $model)
     {

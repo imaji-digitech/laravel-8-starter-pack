@@ -39,3 +39,43 @@ $ php artisan key:generate
 # laravel migrate
 $ php artisan migrate
 ```
+
+## How to use?
+- make form component with livewire
+```shell
+# create copy of .env
+$ php artisan make:livewire form-name
+```
+- use component you create to view
+```shell
+example on resource -> view -> pages -> content -> create
+```
+- use component what you needed
+```shell
+# if you need input like text, number, email, etc 
+<x-input type="text" title="Title" model="content.title"/>
+
+# if you need summernote or textarea for longtext
+<x-summernote title="Contents" model="content.content"/>
+<x-textarea title="Contents" model="content.contents"/>
+
+# if you need option like select or checkbox 
+<x-select :options="$optionStatus" :selected="$content['status_id']" title="Status" model="content.status_id"/>
+<x-select2 :options="$optionTags" :selected="$contentTags" title="Tag content" model="contentTags"/>
+
+#if you need date input
+<x-date type="datepicker" title="Time publish" model="content.created_at"/>
+<x-date type="datetimepicker" title="Time publish" model="content.created_at"/>
+<x-time title="Time publish" model="content.created_at"/>
+<x-daterange title="Time publish" model="content.created_at"/>
+
+#if you need input file
+<x-input type="file" title="Thumbnail" model="thumbnail" accept="image/*"/>
+<div wire:loading wire:target="thumbnail">
+    Proses upload
+</div>
+```
+- use livewire controller (component)
+```shell
+example on app -> Http -> Livewire -> FormContent.php
+```

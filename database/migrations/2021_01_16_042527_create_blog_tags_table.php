@@ -13,15 +13,15 @@ class CreateBlogTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('blog_tags', function (Blueprint $table) {
+        Schema::create('content_tags', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('blog_id');
+            $table->unsignedBigInteger('content_id');
             $table->unsignedBigInteger('tag_id');
             $table->timestamps();
 
-            $table->foreign('blog_id')
+            $table->foreign('content_id')
                 ->references('id')
-                ->on('blogs')
+                ->on('contents')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 

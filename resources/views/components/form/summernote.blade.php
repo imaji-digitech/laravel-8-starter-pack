@@ -1,7 +1,7 @@
 <div class="form-group col-span-6 sm:col-span-5" wire:ignore>
     <label for="name">{{$title}}</label>
-    <textarea type="text" input="description" id="{{str_replace(".", "", $model)}}" class="form-control summernote"></textarea>
-    @error($model) <span class="error">{{ $message }}</span> @enderror
+    <textarea type="text" input="description" id="{{str_replace(".", "", $model)}}" class="form-control summernote @error($model) border-danger @enderror"></textarea>
+    @error($model) <span class="error text-danger">{{ $message }}</span> @enderror
     <script>
         document.addEventListener('livewire:load', function () {
             $("textarea#{{str_replace('.', '', $model)}}").val(@this.get('{{$model}}'));

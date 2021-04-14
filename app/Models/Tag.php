@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $title
  * @property string $created_at
  * @property string $updated_at
- * @property BlogTag[] $blogTags
+ * @property ContentTag[] $contentTags
  */
 class Tag extends Model
 {
@@ -28,8 +28,8 @@ class Tag extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function blogTags()
+    public function contentTags()
     {
-        return $this->hasMany('App\Models\BlogTag');
+        return $this->hasMany('App\Models\ContentTag');
     }
 }

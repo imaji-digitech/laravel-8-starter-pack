@@ -176,6 +176,12 @@
                 this.livewire.on('swal:alert', data => {
                     SwalAlert(data.icon, data.title, data.timeout)
                 })
+
+                this.livewire.on('redirect',data=>{
+                    setTimeout(function () {
+                        window.location.href = data;
+                    }, 2000);
+                })
             })
         </script>
 

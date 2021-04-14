@@ -8,6 +8,20 @@ $links = [
     [
         "href" => [
             [
+                "section_text" => "Content",
+                "section_list" => [
+                    ["href" => "admin.content.index", "text" => "Data content"],
+                    ["href" => "admin.content.create", "text" => "Create new content"]
+                ]
+            ]
+        ],
+        "text" => "Content",
+        "icon"=>"fa-blog",
+        "is_multi" => true,
+    ],
+    [
+        "href" => [
+            [
                 "section_text" => "User",
                 "section_list" => [
                     ["href" => "admin.user", "text" => "Data User"],
@@ -16,6 +30,7 @@ $links = [
             ]
         ],
         "text" => "User",
+        "icon"=>"fa-users",
         "is_multi" => true,
     ],
 ];
@@ -50,7 +65,7 @@ $navigation_links = array_to_object($links);
                     @endphp
 
                     <li class="dropdown {{ ($is_active) ? 'active' : '' }}">
-                        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-chart-bar"></i> <span>{{ $section->section_text }}</span></a>
+                        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas {{$link->icon}}"></i> <span>{{ $section->section_text }}</span></a>
                         <ul class="dropdown-menu">
                             @foreach ($section->section_list as $child)
                                 <li class="{{ Request::routeIs($child->href) ? 'active' : '' }}"><a class="nav-link" href="{{ route($child->href) }}">{{ $child->text }}</a></li>

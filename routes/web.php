@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\CurrentTeamController;
@@ -30,13 +30,12 @@ Route::get('/dashboard', function () {
 Route::get('/', function () {
     return view('welcome');
 });
-//[ 'middleware' => [],'prefix'=>'admin' ]
-//Route::name('admin.')->middleware(['auth:sanctum', 'verified'])->prefix('admin/')->group(function() {
+
 Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verified'])->group(function() {
     Route::post('/summernote-upload',[\App\Http\Controllers\SupportController::class,'upload'])->name('summernote_upload');
     Route::view('/dashboard', "dashboard")->name('dashboard');
-    Route::resource('blog', BlogController::class);
-//    Route::middleware(['checkRole:1']){}
+    Route::resource('content', ContentController::class)->only(['index','create','edit']);
+
     Route::get('/user', [ UserController::class, "index" ])->name('user');
     Route::view('/user/new', "pages.user.create")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.edit")->name('user.edit');

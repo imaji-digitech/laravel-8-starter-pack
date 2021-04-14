@@ -2,15 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/exif.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/summernote/plugin/summernote-ext-resized-data-image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-8-stisla-jetstream.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-8-stisla-jetstream.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/FormContent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ContentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/FormBlog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Blog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/Input.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Input.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/Time.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Time.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042429_create_blogs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_042429_create_contents_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042527_create_blog_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_042527_create_blog_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/form/input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/input.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/form/select.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/select.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/form/select2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/select2.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/form/summernote.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/summernote.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/form/textarea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/textarea.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/form-blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/form-content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/blog/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/content/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/blog/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/content/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/blog/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/content/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +188,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/livewire/table" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -179,11 +196,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/livewire/table" />
       <recent name="$PROJECT_DIR$/database/migrations" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/resources/views/pages" />
-      <recent name="$PROJECT_DIR$/app/Http/Livewire" />
     </key>
   </component>
   <component name="RunManager">
@@ -205,6 +222,7 @@
       <workItem from="1610977845087" duration="1387000" />
       <workItem from="1612275111470" duration="668000" />
       <workItem from="1617364784408" duration="6906000" />
+      <workItem from="1618421964746" duration="6980000" />
     </task>
     <servers />
   </component>
@@ -212,13 +230,22 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611929106711">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1611929106711" />
-    <state x="489" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617369439426">
+    <state x="363" y="28" width="993" height="736" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1618424459169">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
-    <state x="489" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1366.740@0.28.1366.740" timestamp="1617369439426" />
+    <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1611929106711" />
+    <state x="363" y="28" width="993" height="736" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.28.1366.740@0.28.1366.740" timestamp="1618424459169" />
+    <state x="294" y="225" width="767" height="342" key="Registry" timestamp="1618424912667">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="294" y="225" width="767" height="342" key="Registry/0.28.1366.740@0.28.1366.740" timestamp="1618424912667" />
+    <state x="489" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618427849724">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="489" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1366.740@0.28.1366.740" timestamp="1618427849724" />
+    <state x="347" y="177" key="run.anything.popup" timestamp="1618428516418">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="347" y="177" key="run.anything.popup/0.28.1366.740@0.28.1366.740" timestamp="1618428516418" />
   </component>
 </project>

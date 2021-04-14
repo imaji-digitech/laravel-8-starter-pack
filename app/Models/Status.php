@@ -7,14 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property integer $id
  * @property string $title
- * @property string $slug
- * @property string $content
- * @property int $view
- * @property string $thumbnail
  * @property string $created_at
  * @property string $updated_at
+ * @property Content[] $contents
  */
-class Blog extends Model
+class Status extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
@@ -26,6 +23,13 @@ class Blog extends Model
     /**
      * @var array
      */
-    protected $fillable = ['title', 'slug', 'content', 'view', 'thumbnail', 'created_at', 'updated_at'];
+    protected $fillable = ['title', 'created_at', 'updated_at'];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function contents()
+    {
+        return $this->hasMany('App\Models\Content', 'status');
+    }
 }

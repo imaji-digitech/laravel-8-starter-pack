@@ -1,13 +1,13 @@
 <div class="form-group col-span-6 sm:col-span-5" wire:ignore>
     <label for="{{$model}}">{{$title}}</label>
-    <select id="{{$model}}" class="form-control select2" multiple="">
+    <select id="{{$model}}" class="form-control select2 @error($model) border-danger @enderror" multiple="">
         @for($i=0;$i<count($options) ;$i++)
             <option value="{{$options[$i]['value']}}" {{ $isSelected($options[$i]['value']) ? 'selected="selected"' : '' }}>
-
                 {{$options[$i]['title']}}
             </option>
         @endfor
     </select>
+    @error($model) <span class="error text-danger">{{ $message }}</span> @enderror
     <script>
         document.addEventListener('livewire:load', function () {
             let data;
