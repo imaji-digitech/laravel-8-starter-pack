@@ -51,7 +51,7 @@ $ php artisan make:livewire form-name
 example on resource -> view -> pages -> content -> create
 ```
 - use component what you needed
-```shell
+```blade
 # if you need input like text, number, email, etc 
 <x-input type="text" title="Title" model="content.title"/>
 
