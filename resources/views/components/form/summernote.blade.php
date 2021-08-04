@@ -13,7 +13,7 @@
                 callbacks: {
                     onImageUpload: function(files) {
                         for(let i=0; i < files.length; i++) {
-                            $.upload(files[i]);
+                            $.upload{{str_replace(".", "", $model)}}(files[i]);
                         }
                         console.log('file loading');
                     },
@@ -23,7 +23,7 @@
 
                 }
             });
-            $.upload = function (file) {
+            $.upload{{str_replace(".", "", $model)}} = function (file) {
                 let out = new FormData();
                 out.append('file', file, file.name);
                 $.ajaxSetup({
