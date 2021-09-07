@@ -4,8 +4,7 @@
         <x-input type="text" title="title" model="model"/>
         <x-textarea title="title" model="model"/>
         <x-summernote title="title" model="model"/>
-{{--        @php($a=array([]))--}}
-        <x-select :options="$options" selected="waiting" title="title" model="model"/>
+        <x-select2 :options="$options" selected="waiting" title="title" model="model"/>
     </form>
 </div>
 </x-app-layout>

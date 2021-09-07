@@ -97,13 +97,13 @@
         <script defer src="{{asset('vendor/summernote/plugin/summernote-ext-resized-data-image.js')}}"></script>
         <script defer src="{{asset('vendor/daterangepicker/daterangepicker.js')}}"></script>
         <script defer src="{{asset('vendor/chart.js/dist/Chart.min.js')}}"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
         <script src="{{asset('vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js')}}"></script>
 
         <script src="{{ asset('stisla/js/stisla.js') }}"></script>
         <script src="{{ asset('stisla/js/scripts.js') }}"></script>
         <script src="{{ asset('vendor/select2/select2.min.js') }}"></script>
-        {{--<livewire:scripts/>--}}
+
 
         <script>
             $('.daterange-cus').daterangepicker({
@@ -114,9 +114,6 @@
         </script>
 
         <script>
-
-
-
             const SwalModal = (icon, title, html) => {
                 Swal.fire({
                     icon,

@@ -6,14 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
- * @property integer $content_id
- * @property integer $tag_id
+ * @property integer $transaction_id
+ * @property integer $product_id
+ * @property int $quantity
+ * @property int $total
  * @property string $created_at
  * @property string $updated_at
- * @property Content $content
- * @property Tag $tag
+ * @property Product $product
+ * @property Transaction $transaction
  */
-class ContentTag extends Model
+class TransactionCredit extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
@@ -25,21 +27,21 @@ class ContentTag extends Model
     /**
      * @var array
      */
-    protected $fillable = ['content_id', 'tag_id', 'created_at', 'updated_at'];
+    protected $fillable = ['transaction_id', 'product_id', 'quantity', 'total', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function content()
+    public function product()
     {
-        return $this->belongsTo('App\Models\Content');
+        return $this->belongsTo('App\Models\Product');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function tag()
+    public function transaction()
     {
-        return $this->belongsTo('App\Models\Tag');
+        return $this->belongsTo('App\Models\Transaction');
     }
 }

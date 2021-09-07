@@ -11,6 +11,7 @@ class Main extends Component
 
     public $model;
     public $name;
+    public $dataId;
 
     public $perPage = 10;
     public $sortField = "id";
@@ -47,6 +48,99 @@ class Main extends Component
                             'create_new_text' => 'Buat User Baru',
                             'export' => '#',
                             'export_text' => 'Export'
+                        ]
+                    ])
+                ];
+                break;
+            case 'cash-book':
+                $cashBooks = $this->model::search($this->dataId)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.cash-book',
+                    "cashBooks" => $cashBooks,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.cash-book.create',$this->dataId),
+                            'create_new_text' => 'Tambah data kas baru',
+                        ]
+                    ])
+                ];
+                break;
+            case 'cash-note':
+                $cashNotes = $this->model::search($this->search,$this->dataId)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.cash-note',
+                    "cashNotes" => $cashNotes,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.cash-note.create',$this->dataId),
+                            'create_new_text' => 'Buka dan tutup buku',
+                        ]
+                    ])
+                ];
+                break;
+            case 'product':
+                $products = $this->model::search($this->search)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.product',
+                    "products" => $products,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.product.create'),
+                            'create_new_text' => 'Tambah produk baru',
+                        ]
+                    ])
+                ];
+                break;
+            case 'product-type':
+                $productTypes = $this->model::search($this->search)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+                return [
+                    "view" => 'livewire.table.product-type',
+                    "productTypes" => $productTypes,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.product-type.create'),
+                            'create_new_text' => 'Tambah UMKM baru',
+                        ]
+                    ])
+                ];
+                break;
+            case 'transaction-history':
+                $transactions = $this->model::search($this->search,[3])
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.transaction-history',
+                    "transactions" => $transactions,
+                    "data" => array_to_object([
+                        'href' => [
+
+                        ]
+                    ])
+                ];
+                break;
+            case 'transaction-active':
+                $transactions = $this->model::search($this->search,[1,2])
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.transaction-active',
+                    "transactions" => $transactions,
+                    "data" => array_to_object([
+                        'href' => [
+
                         ]
                     ])
                 ];

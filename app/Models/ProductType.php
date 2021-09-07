@@ -9,13 +9,13 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $title
  * @property string $created_at
  * @property string $updated_at
- * @property ContentTag[] $contentTags
+ * @property Product[] $products
  */
-class Tag extends Model
+class ProductType extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -23,13 +23,18 @@ class Tag extends Model
     /**
      * @var array
      */
-    protected $fillable = ['title', 'created_at', 'updated_at'];
+    protected $fillable = ['title','user_id', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function contentTags()
+    public function products()
     {
-        return $this->hasMany('App\Models\ContentTag');
+        return $this->hasMany('App\Models\Product');
+    }
+    public static function search($query)
+    {
+        return empty($query) ? static::query()
+            : static::where('title', 'like', '%' . $query . '%');
     }
 }

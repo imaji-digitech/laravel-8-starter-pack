@@ -1,42 +1,3 @@
-@php
-$links = [
-    [
-        "href" => "admin.dashboard",
-        "text" => "Dashboard",
-        "is_multi" => false,
-    ],
-    [
-        "href" => [
-            [
-                "section_text" => "Content",
-                "section_list" => [
-                    ["href" => "admin.content.index", "text" => "Data content"],
-                    ["href" => "admin.content.create", "text" => "Create new content"]
-                ]
-            ]
-        ],
-        "text" => "Content",
-        "icon"=>"fa-blog",
-        "is_multi" => true,
-    ],
-    [
-        "href" => [
-            [
-                "section_text" => "User",
-                "section_list" => [
-                    ["href" => "admin.user", "text" => "Data User"],
-                    ["href" => "admin.user.new", "text" => "Buat User"]
-                ]
-            ]
-        ],
-        "text" => "User",
-        "icon"=>"fa-users",
-        "is_multi" => true,
-    ],
-];
-$navigation_links = array_to_object($links);
-@endphp
-
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
@@ -47,34 +8,58 @@ $navigation_links = array_to_object($links);
                 <img class="d-inline-block" width="32px" height="30.61px" src="" alt="">
             </a>
         </div>
-        @foreach ($navigation_links as $link)
+
         <ul class="sidebar-menu">
-            <li class="menu-header">{{ $link->text }}</li>
-            @if (!$link->is_multi)
-            <li class="{{ Request::routeIs($link->href) ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route($link->href) }}"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+            <li class="menu-header">Dashboard</li>
+            <li class="">
+                <a class="nav-link" href=""><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
-            @else
-                @foreach ($link->href as $section)
-                    @php
-                    $routes = collect($section->section_list)->map(function ($child) {
-                        return Request::routeIs($child->href);
-                    })->toArray();
-
-                    $is_active = in_array(true, $routes);
-                    @endphp
-
-                    <li class="dropdown {{ ($is_active) ? 'active' : '' }}">
-                        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas {{$link->icon}}"></i> <span>{{ $section->section_text }}</span></a>
-                        <ul class="dropdown-menu">
-                            @foreach ($section->section_list as $child)
-                                <li class="{{ Request::routeIs($child->href) ? 'active' : '' }}"><a class="nav-link" href="{{ route($child->href) }}">{{ $child->text }}</a></li>
-                            @endforeach
-                        </ul>
-                    </li>
-                @endforeach
-            @endif
+            <li class="menu-header">Managemen Kas</li>
+            @php($productTypes = \App\Models\ProductType::get())
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Laporan kas</span></a>
+                <ul class="dropdown-menu">
+                    @foreach($productTypes as $productType)
+                        <li><a class="nav-link"
+                               href="{{route('admin.cash-note.index',$productType->id)}}">{{ $productType->title }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Buku kas</span></a>
+                <ul class="dropdown-menu">
+                    @foreach($productTypes as $productType)
+                        <li><a class="nav-link"
+                               href="{{route('admin.cash-book.index',$productType->id)}}">{{ $productType->title }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            </li>
+            <li class="menu-header">Managemen Produk</li>
+            <li class="">
+                <a class="nav-link" href="{{route('admin.product-type.index')}}">
+                    <i class="fas fa-fire"></i><span>UMKM</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="nav-link" href="{{route('admin.product.index')}}">
+                    <i class="fas fa-fire"></i><span>Produk</span>
+                </a>
+            </li>
+            {{--            <li class="">--}}
+            {{--                <a class="nav-link" href=""><i class="fas fa-fire"></i><span>HPP Proyeksi</span></a>--}}
+            {{--            </li>--}}
+            <li class="menu-header">Transaksi</li>
+            <li class="">
+                <a class="nav-link" href="{{route('admin.transaction.create')}}"><i class="fas fa-fire"></i><span>Buat transaksi</span></a>
+            </li>
+            <li class="">
+                <a class="nav-link" href="{{route('admin.transaction.history')}}"><i class="fas fa-fire"></i><span>Riwayat transaksi</span></a>
+            </li>
+            <li class="">
+                <a class="nav-link" href="{{route('admin.transaction.active')}}"><i class="fas fa-fire"></i><span>Transaksi aktif</span></a>
+            </li>
         </ul>
-        @endforeach
     </aside>
 </div>

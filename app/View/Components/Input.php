@@ -11,7 +11,7 @@ class Input extends Component
     public $title;
     public $model;
     public $accept;
-
+    public $defer;
 
     /**
      * Input constructor.
@@ -20,12 +20,13 @@ class Input extends Component
      * @param string $model
      * @param string|null $accept
      */
-    public function __construct($type, $title, $model, $accept=null)
+    public function __construct($type, $title, $model, $defer=null,$accept=null)
     {
         $this->type = $type;
         $this->title = $title;
         $this->model = $model;
         $this->accept = $accept;
+        $this->defer=$defer;
     }
 
     /**
